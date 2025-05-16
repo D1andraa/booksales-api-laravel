@@ -8,12 +8,12 @@
 <body>
     <h1>Profil Author</h1>
 
-    @foreach ($authors as $item)
+    @foreach ($authors as $author)
     <ul>
-        <li>{{ $item['id'] }}</li>
-        <li>{{ $item['name'] }}</li>
-        <li>{{ $item['photo'] }}</li>
-        <li>{{ $item['bio'] }}</li>
+        <li>{{ $author['id'] }}</li>
+        <li>{{ $author['name'] }}</li>
+        <li>{{ $author['photo'] }}</li>
+        <li>{{ $author['bio'] }}</li>
     </ul>
 
     @endforeach
