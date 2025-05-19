@@ -1,19 +1,11 @@
 <?php
-use App\Http\Controllers\AuthorController;
-use App\Http\Controllers\GenreController;
-use App\Http\Controllers\BookController;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
-
-Route::get('/books', [BookController::class, 'index']);
-Route::get('/genres', [GenreController::class, 'index']);
-Route::get('authors', [AuthorController::class, 'index']);
-
-
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
